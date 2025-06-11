@@ -1,30 +1,174 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
-  background-color: #f9f9f9;
-  color: #333;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0f7fa 100%);
+    margin: 0;
+    padding: 0;
+    color: #222;
+    min-height: 100vh;
 }
 
-h1 {
-  color: #0066cc;
+header {
+    background: #00bcd4;
+    color: #fff;
+    padding: 32px 0 18px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,188,212,0.09);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.6em;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+nav {
+    margin-top: 10px;
 }
 
 nav a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #0077cc;
-  font-weight: bold;
+    color: #fff;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: background 0.18s, color 0.18s;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a:hover, nav a:focus {
+    background: #fff;
+    color: #00bcd4;
 }
 
 main {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 800px;
-  margin-top: 20px;
+    max-width: 720px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 36px 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,188,212,0.08);
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 36px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    font-size: 1.07em;
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #b2ebf2;
+    padding: 13px 8px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background: #e0f7fa;
+    font-weight: 600;
+    color: #00796b;
+}
+
+.schedule-table tr:nth-child(even) {
+    background: #f3fafd;
+}
+
+.pricing-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing-list li {
+    background: #e0f7fa;
+    margin-bottom: 18px;
+    padding: 22px 28px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,188,212,0.08);
+    min-width: 210px;
+    flex: 1 1 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-list h3 {
+    color: #009688;
+    margin-bottom: 8px;
+    font-size: 1.22em;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.registration-form label {
+    font-weight: 500;
+    color: #00796b;
+}
+
+.registration-form input,
+.registration-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #90caf9;
+    font-size: 1.05em;
+    background: #f8fafc;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+    border: 1.5px solid #00bcd4;
+    background: #fff;
+}
+
+.registration-form button {
+    background: linear-gradient(90deg,#00bcd4 0%, #009688 100%);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1.15em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 14px;
+    box-shadow: 0 2px 6px rgba(0,188,212,0.09);
+    transition: background 0.18s, transform 0.14s;
+}
+
+.registration-form button:hover {
+    background: #00796b;
+    transform: translateY(-2px) scale(1.03);
+}
+
+#success-message {
+    color: #009688;
+    font-weight: 600;
+    font-size: 1.15em;
+    margin-top: 20px;
+    padding: 14px 0;
+    text-align: center;
 }
